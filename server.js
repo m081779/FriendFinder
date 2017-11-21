@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 //initializing body-parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //importing routes
@@ -33,9 +33,9 @@ module.exports.lookForFriends = function () {
 
 			//we loop through their scores and find the difference from the 
 			//current user's scores.  
-			for (let j = 0; j < friends.array[i]['scores[]'].length; j++) {
-				let score = friends.array[i]['scores[]'][j];
-				let difference = Math.abs(score - current['scores[]'][j])
+			for (let j = 0; j < friends.array[i].scores.length; j++) {
+				let score = friends.array[i].scores[j];
+				let difference = Math.abs(score - current.scores[j])
 				friendScore+=difference;
 			}
 
