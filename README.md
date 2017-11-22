@@ -17,11 +17,11 @@
 ![image of the landing page](https://github.com/m081779/FriendFinder/blob/master/images/img1.png)
 
 
-## If you click on the link to the API, this is the data you will see.  It is formatted in this image by a chrome JSON parser extension:
+## If you click on the link to the API, this is the data you will see.  It is formatted in this image by a chrome JSON formatter extension:
 ![image of the landing page](https://github.com/m081779/FriendFinder/blob/master/images/img3.png)
 
 
-## If you click on the link to the survey, you are promted to enter your name, and a link to an image of yourself:
+## If you click on the link to the survey, you are prompted to enter your name, and a link to an image of yourself:
 ![image of the landing page](https://github.com/m081779/FriendFinder/blob/master/images/img2.png)
 
 
