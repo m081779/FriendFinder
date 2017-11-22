@@ -7,6 +7,7 @@ module.exports = function(app){
 		module.exports.user = req.body;
 		friends.array.push(req.body);
 		console.log(`${req.body.name} successfully added!`)
+		res.json({});
 	});
 
 	app.get("/bestFriend", function (req,res) {
