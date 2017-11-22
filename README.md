@@ -1,6 +1,6 @@
 # Friend Finder
 
-## [Click here]() to view the deployed site.
+## [Click here](https://arcane-thicket-54538.herokuapp.com/) to view the deployed site.
 
 ## Technologies Used:
 * Node JS
