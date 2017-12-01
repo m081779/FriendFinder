@@ -186,7 +186,7 @@
   			let name = $( '#name' ).val().trim();
   			let photo = $( '#image' ).val().trim();
 
-                //triggering warning message if inputs are incomplete
+          //triggering warning message if inputs are incomplete
   				if ( name === '' || photo === '') {
                     inputComplete = false;
                     $( '.error' ).empty();
@@ -203,7 +203,14 @@
 					photo,
 					scores:[]
 				}
-				for ( let i = 1; i <= 10; i++ ) {
+
+        //loop that pushes values of questions into newFriend
+        //object, and clears inputs.  If user chose not to, or 
+        //failed to answer a question, a default neutral value 
+        //is assigned.  This mechanism is used in place of user 
+        //input validation on the questions to allow user to save 
+				// time on questions they are neutral about.
+        for ( let i = 1; i <= 10; i++ ) {
 					let score = $( '#q'+ i ).val() || "3"
 					newFriend.scores.push( score );
 					$( '#q'+ i ).val('').selectpicker('refresh');
@@ -219,7 +226,7 @@
                     console.log('data:',data)
                 });
 
-	  			//getting best match data from backend, and passing the data to the modal
+  			//getting best match data from backend, and passing the data to the modal
 				$.get("/bestFriend", function (data2) {
 	        		$('#myModal').modal('toggle');
 	        		$('#modalName').text(data2.friend.name);
